@@ -5,3 +5,9 @@ module:
     extended: false
     max: ""
     min: ""
+params:
+    skin: "macintosh"
+
+title: "mmm neofeed d' ja"
+tags: ["neofeed", "neocities", "hugotemplate", "altwit"]
+
