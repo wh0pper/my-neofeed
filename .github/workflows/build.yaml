@@ -25,7 +25,7 @@ jobs:
           if [ -f "./config.toml" ]; then
               echo "CONFIG_EXISTS=1" >> $GITHUB_ENV
               echo "Hugo TOML configuration file found."
-          elif [ -f "./config.yaml" ]; then
+          elif [ -f "./config.yaml" ] || [ -f "./config.yml"]; then
               echo "CONFIG_EXISTS=1" >> $GITHUB_ENV
               echo "Hugo YAML configuration file found."
           elif [ -f "./config.json" ]; then
