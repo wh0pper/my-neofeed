@@ -1,5 +1,16 @@
 exclude: ["archetypes", "exampleSite", "layouts", "theme.toml"]
+baseURL: "https://theyrej.neocities.org/"
+languageCode: "en-us"
+paginate: 9 
+title: "mmm neofeed d' ja"
+tags: ["neofeed", "neocities", "hugotemplate", "altwit"]
 
+taxonomies:
+  tag: "tags"
+author:
+  name: "Reija Clemmensen"
+  image: "image link here"
+  about: "I am the internet and you can too!"
 module:
   hugoVersion:
     extended: false
@@ -7,7 +18,9 @@ module:
     min: ""
 params:
     skin: "macintosh"
-
-title: "mmm neofeed d' ja"
-tags: ["neofeed", "neocities", "hugotemplate", "altwit"]
+    githubuser: "wh0pper"
+permalinks:
+  feed: "/:title/"
+outputs:
+  home: ["HTML", "JSON", "RSS"]
 
