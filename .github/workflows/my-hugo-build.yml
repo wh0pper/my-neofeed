@@ -58,29 +58,11 @@ jobs:
             --minify \
             -d ${DEST:-"docs"} \
             --baseURL "${{ steps.pages.outputs.base_url }}/"  
-      # - name: Upload artifact
-      #   uses: actions/upload-pages-artifact@v1
-      #   with:
-      #     path: ./public
-
-  # template gh pages deploy
-  # deploy:
-  #   environment:
-  #     name: neocities
-  #     url: ${{ - }}
-  #   runs-on: ubuntu-latest
-  #   needs: build
-  #   steps:
-  #     - name: Deploy to GitHub Pages
-  #       id: deployment
-  #       uses: actions/deploy-pages@v1
-
-  # vdrake neofeed uses:
       - name: 🐈 Deploy to Neocities
         uses: bcomnes/deploy-to-neocities@master
         if: ${{ env.NEOCITIES_API_TOKEN }}
         with:
-          api_token: ${{ env.NEOCITIES_API_TOKEN }}
+          api_token: ${{ secrets.NEOCITIES_API_TOKEN }}
           cleanup: false
           dist_dir: docs
 
