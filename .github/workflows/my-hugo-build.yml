@@ -59,8 +59,7 @@ jobs:
             -d ${DEST:-"docs"} \
             --baseURL "${{ steps.pages.outputs.base_url }}/"  
       - name: 🐈 Deploy to Neocities
-        uses: bcomnes/deploy-to-neocities@master
-        if: ${{ env.NEOCITIES_API_TOKEN }}
+        uses: bcomnes/deploy-to-neocities@v1
         with:
           api_token: ${{ secrets.NEOCITIES_API_TOKEN }}
           cleanup: false
