@@ -9,7 +9,7 @@ taxonomies:
   tag: "tags"
 author:
   name: "Reija Clemmensen"
-  image: "image link here"
+  image: "./img/LEDZme.jpeg"
   about: "I am the internet and you can too!"
 module:
   hugoVersion:
@@ -17,7 +17,7 @@ module:
     max: ""
     min: ""
 params:
-    skin: "macintosh"
+    skin: "rejintosh"
     githubuser: "wh0pper"
 permalinks:
   feed: "/:title/"
